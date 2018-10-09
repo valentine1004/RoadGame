@@ -18,8 +18,16 @@ auto.src = "img/auto.png";
 var cars = [];
 
 cars[0] = {
-    x: 0,
-    y: 20
+    x: randomInteger(0, 400),
+    y: randomInteger(0, 300)
+}
+cars[1] = {
+    x: randomInteger(0, 400),
+    y: randomInteger(0, 300)
+}
+cars[2] = {
+    x: randomInteger(0, 400),
+    y: randomInteger(0, 300)
 }
 
 //Position of auto
@@ -53,14 +61,20 @@ function draw(){
     ctx.drawImage(road, 0, 0);
     for(var i = 0; i < cars.length; i++){
         ctx.drawImage(car1, cars[i].x, cars[i].y, 30, 50);
-        ctx.drawImage(car2, 400, 200, 30, 50);
-        ctx.drawImage(car3, 250, 260, 30, 50);
+        ctx.drawImage(car2, cars[i].x, cars[i].y, 30, 50);
+        ctx.drawImage(car3, cars[i].x, cars[i].y, 30, 50);
         cars[i].y++;
     }
     
     ctx.drawImage(auto, xPos, yPos, 30, 50);
     // yPos -= startSpeed;
     requestAnimationFrame(draw);
+};
+
+function randomInteger(min, max) {
+    var rand = min + Math.random() * (max + 1 - min);
+    rand = Math.floor(rand);
+    return rand;
 };
 
 auto.onload = draw;
