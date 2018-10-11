@@ -7,3 +7,21 @@
     display: block;
     background: #eee;
 }
+.game-header{
+    height: 50px;
+    background: #eff5ff;
+    font-family: Arial;
+}
+.game-header h3{
+    text-align: center;
+    padding-top: 10px;
+}
+.box-wrapper{
+    width: 100%;
+    /*background: #bed63a;*/
+    background: url("img/back.jpg") 100%;
+}
+.road-box{
+    width: 600px;
+    margin: 0 auto;
+}
