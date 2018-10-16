@@ -6,6 +6,7 @@
     margin: 0 auto;
     display: block;
     background: #eee;
+    position: relative;
 }
 .game-header{
     height: 50px;
@@ -22,6 +23,12 @@
     background: url("img/back.jpg") 100%;
 }
 .road-box{
-    width: 600px;
-    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+.info-block{
+    position: absolute;
+    font-family: Arial;
+    top: 15px;
+    right: 45px;
 }
